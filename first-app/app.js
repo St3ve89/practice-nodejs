@@ -1,5 +1,7 @@
-const path = require('path');
+const os = require('os');
 
-const pathObj = path.parse(__filename);
+const totalMemory = os.totalmem();
+const freeMemory = os.freemem();
 
-console.log(pathObj);
+console.log(`totalMemory: ${totalMemory}`);
+console.log(`freeMemory: ${freeMemory}`);
